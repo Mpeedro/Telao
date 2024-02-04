@@ -20,16 +20,19 @@ public class Telão{
 
     public void Partida(int voto){
      Scanner teclado = new Scanner(System.in);
+
+     System.out.println("Vamos Iniciar a partida, estamos com os times: " + "\n" + this.getNomea() + " " + PontuacaoA + " X " + PontuacaoB + " " +this.getNomeb());
+     System.out.println("Digite 1 para marcar ponto pra " + this.getNomea() + " // Digite 2" + " para marcar ponto pra " + this.getNomeb());
+
         for(int i =0; i<=4; i++){
-        System.out.println("Vamos Iniciar a partida, estamos com os times " + "\n" + this.getNomea() + " " + PontuacaoA + " X " + PontuacaoB + " " +this.getNomeb());
-        System.out.println("Digite 1 para marcar ponto pra " + this.getNomea() + " // Digite 2" + " para marcar ponto pra " + this.getNomeb());
            resultado();
              voto = teclado.nextInt();
-             if(voto ==1){
+             if(voto == 1 ){
              this.PontuacaoA++;
-             } else{
+             } else if (voto ==2){
              this.PontuacaoB++;
-             } if(this.PontuacaoA==5){
+             } 
+             if(this.PontuacaoA==5){
                  System.out.println("O Time: " + Nomea + " Ganhou de " + PontuacaoA + " a " + PontuacaoB + Nomeb );
                  this.Nomea.vitoria();
                  this.Nomeb.derrota();
@@ -40,13 +43,8 @@ public class Telão{
              }           
                resultado(); 
         }
-      
-       
-        
-       
-}
-
-    
+          
+} 
     public void espaço(){
           System.out.println("==================================");
          
@@ -90,12 +88,6 @@ public class Telão{
     public void setPontuacaoB(int PontuacaoB) {
         this.PontuacaoB = PontuacaoB;
     }
-     
-   
-   
-
-    
-  
     }
 
     
